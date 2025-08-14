@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment # The Kubernetes resource type — manages replica sets and pods
+metadata:
+  name: wil-deployment
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wil-playground # Tells the Deployment which Pods to manage (matches pod labels)
+  template:
+    metadata:
+      labels:
+        app: wil-playground # Label assigned to Pods created by this Deployment (must match selector)
+    spec:
+      containers:
+        - name: wil-playground
+          image: wil42/playground:v2 # Hello-Kubernetes image, pulled from Docker Hub
+          ports:
+            - containerPort: 8888 # Port that the container inside the pod listens to, it's informative and has no configurative purpose.
