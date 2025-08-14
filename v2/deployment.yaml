@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment # The Kubernetes resource type — manages replica sets and pods
 metadata:
-  name: wil_v2-deployment
+  name: wil-v2-deployment
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wil_v2 # Tells the Deployment which Pods to manage (matches pod labels)
+      app: wil-v2 # Tells the Deployment which Pods to manage (matches pod labels)
   template:
     metadata:
       labels:
-        app: wil_v2 # Label assigned to Pods created by this Deployment (must match selector)
+        app: wil-v2 # Label assigned to Pods created by this Deployment (must match selector)
     spec:
       containers:
         - name: wil_v2
