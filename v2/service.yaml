@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service # Kubernetes resource that exposes a set of Pods as a network service
 metadata:
-  name: wil_v2-service
+  name: wil-v2-service
   namespace: dev
 spec:
   selector:
-    app: wil_v2 # Selects the 'app1' Pods labels created by Deployment
+    app: wil-v2 # Selects the 'app1' Pods labels created by Deployment
   ports:
     - protocol: TCP # TCP By default if not set : tells kube-proxy how to route packets
       port: 80 # The port on which the Service is exposed inside the cluster
