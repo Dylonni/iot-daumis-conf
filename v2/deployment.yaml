@@ -14,7 +14,7 @@ spec:
         app: wil-v2 # Label assigned to Pods created by this Deployment (must match selector)
     spec:
       containers:
-        - name: wil_v2
+        - name: wil-v2
           image: wil42/playground:v2 # Hello-Kubernetes image, pulled from Docker Hub
           ports:
             - containerPort: 8888 # Port that the container inside the pod listens to, it's informative and has no configurative purpose.
