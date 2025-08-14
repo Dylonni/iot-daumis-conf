@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: wil-playground
-          image: wil42/playground:v1 # Hello-Kubernetes image, pulled from Docker Hub
+          image: wil42/playground:v2 # Hello-Kubernetes image, pulled from Docker Hub
           ports:
             - containerPort: 8888 # Port that the container inside the pod listens to, it's informative and has no configurative purpose.
