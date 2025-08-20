@@ -17,4 +17,5 @@ spec:
         - name: wil-playground
           image: wil42/playground:v2 # Kubernetes image, pulled from Docker Hub
           ports:
+            - hostPort: 8888
             - containerPort: 8888 # Port that the container inside the pod listens to, it's informative and has no configurative purpose.
