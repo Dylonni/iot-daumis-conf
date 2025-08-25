@@ -7,7 +7,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wil-playgroundg # Tells the Deployment which Pods to manage (matches pod labels)
+      app: wil-playground # Tells the Deployment which Pods to manage (matches pod labels)
   template:
     metadata:
       labels:
